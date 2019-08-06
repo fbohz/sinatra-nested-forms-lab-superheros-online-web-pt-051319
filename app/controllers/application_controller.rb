@@ -12,7 +12,7 @@ class App < Sinatra::Base
   get '/teams' do
     @team_name = params[:team][:name]
     @team_motto = params[:team][:motto]
-    @hero_name = []
+    @hero_name = [] #this and below will be filled out later
     @hero_power = []
     @hero_bio = []
     @team_members = params[:team][:members]
