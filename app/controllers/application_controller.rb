@@ -9,7 +9,7 @@ class App < Sinatra::Base
   end 
   
   
-  get '/teams' do
+  post '/teams' do
     @team_name = params[:team][:name]
     @team_motto = params[:team][:motto]
     @hero_name = [] #this and below will be filled out later
@@ -22,7 +22,7 @@ class App < Sinatra::Base
       @hero_power << hero[:power]
       @hero_bio << hero[:bio]
     end
-    binding.pry
+    
     erb :team
   end 
   
